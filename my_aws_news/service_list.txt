@@ -1,0 +1,168 @@
+Amazon EC2
+Amazon S3
+Amazon RDS
+Amazon Aurora
+Amazon DynamoDB
+Amazon Redshift
+Amazon VPC
+AWS Lambda
+AWS Elastic Beanstalk
+Amazon EKS
+Amazon ECS
+AWS Fargate
+AWS Batch
+AWS Direct Connect
+Amazon Bedrock
+AWS Elastic Load Balancing
+Amazon CloudFront
+Amazon Route 53
+Amazon API Gateway
+AWS AppSync
+AWS Cloud WAN
+Amazon CloudWatch
+Amazon ElastiCache
+AWS Encryption SDK
+AWS CloudTrail
+AWS CloudFormation
+AWS Trusted Advisor
+Amazon GuardDuty
+Amazon Macie
+AWS Security Hub
+Amazon Inspector
+AWS Artifact
+AWS Identity and Access Management
+AWS Single Sign-On
+AWS Directory Service
+Amazon Cognito
+AWS Key Management Service
+AWS Certificate Manager
+AWS Secrets Manager
+AWS Shield
+AWS WAF
+Amazon Simple Queue Service
+Amazon Simple Notification Service
+Amazon MQ
+Amazon Kinesis
+Amazon Kinesis Data Firehose
+Amazon Kinesis Data Streams
+Amazon Kinesis Data Analytics
+Amazon MSK
+Amazon EventBridge
+AWS Step Functions
+AWS App Mesh
+Amazon SQS
+Amazon QuickSight
+Amazon Athena
+Amazon EMR
+AWS Glue
+AWS Data Pipeline
+AWS Lake Formation
+Amazon SageMaker
+Amazon Forecast
+Amazon Personalize
+Amazon Rekognition
+Amazon Textract
+Amazon Comprehend
+Amazon Transcribe
+Amazon Translate
+AWS DeepLens
+AWS DeepRacer
+AWS RoboMaker
+AWS IoT Core
+AWS IoT Greengrass
+AWS IoT Analytics
+Amazon FreeRTOS
+AWS IoT Device Management
+Amazon WorkSpaces
+Amazon AppStream 2.0
+Amazon WorkDocs
+Amazon WorkLink
+Amazon WorkMail
+Amazon Chime
+Amazon Pinpoint
+Amazon SES
+Amazon SNS
+Amazon Sumerian
+AWS Ground Station
+AWS Chatbot
+Amazon Honeycode
+AWS CodeCommit
+AWS CodeBuild
+AWS CodeDeploy
+AWS CodePipeline
+AWS CodeStar
+Amazon Corretto
+AWS X-Ray
+AWS Proton
+AWS Amplify
+AWS App Runner
+Amazon Lightsail
+AWS OpsWorks
+AWS Systems Manager
+AWS License Manager
+AWS Service Catalog
+AWS Config
+AWS Resource Access Manager
+AWS Organizations
+AWS Control Tower
+AWS Backup
+Amazon EFS
+Amazon FSx
+AWS Outposts
+AWS Local Zones
+AWS Wavelength
+AWS Snow Family
+Amazon EBS
+Amazon Elastic Inference
+Amazon Detective
+Amazon QLDB
+Amazon Managed Blockchain
+Amazon Braket
+Amazon Elastic Transcoder
+AWS Elemental MediaConnect
+AWS Elemental MediaConvert
+AWS Elemental MediaLive
+AWS Elemental MediaPackage
+AWS Elemental MediaStore
+AWS Elemental MediaTailor
+Amazon AppFlow
+Amazon Fraud Detector
+Amazon Location Service
+Amazon HealthLake
+Amazon MemoryDB for Redis
+Amazon Neptune
+Amazon Timestream
+AWS Data Exchange
+AWS Transfer Family
+AWS Fault Injection Simulator
+AWS Well-Architected Tool
+Amazon CloudSearch
+Amazon Kendra
+Amazon Polly
+AWS Snowball Edge
+AWS IoT Core for LoRaWAN
+AWS IoT SiteWise
+AWS IoT Events
+Amazon IVS
+AWS PrivateLink
+AWS Resource Explorer
+Amazon Omics
+Amazon Connect
+Amazon CodeGuru Reviewer
+Amazon CodeGuru Profiler
+AWS Migration Hub
+AWS Application Migration Service
+AWS Database Migration Service
+AWS DataSync
+AWS Server Migration Service
+Amazon EMR on EKS
+AWS Panorama
+AWS AppConfig
+AWS Config Conformance Packs
+Amazon Managed Grafana
+Amazon Managed Service for Prometheus
+AWS Glue DataBrew
+Amazon FinSpace
+AWS Mainframe Modernization
+AWS Application Composer
+Amazon Security Lake
