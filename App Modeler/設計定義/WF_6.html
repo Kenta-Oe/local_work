@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注文確認画面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .order-details {
+            margin: 20px 0;
+        }
+        .order-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .back-to-home {
+            margin: 20px 0;
+        }
+        .back-to-home button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>注文確認画面</h1>
+        </header>
+        <section class="order-details">
+            <h2>注文番号: 123456</h2>
+            <div class="order-item">
+                <h3>製品名1</h3>
+                <p>数量: 1</p>
+                <p>価格: ¥1000</p>
+            </div>
+            <div class="order-item">
+                <h3>製品名2</h3>
+                <p>数量: 2</p>
+                <p>価格: ¥2000</p>
+            </div>
+            <div class="order-summary">
+                <h3>合計金額: ¥5000</h3>
+            </div>
+        </section>
+        <section class="back-to-home">
+            <button>ホームに戻る</button>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チェックアウト画面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin: 20px 0;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>チェックアウト画面</h1>
+        </header>
+        <section class="payment-info">
+            <h2>支払い情報</h2>
+            <div class="form-group">
+                <label for="card-number">クレジットカード番号</label>
+                <input type="text" id="card-number" placeholder="クレジットカード番号を入力">
+            </div>
+            <div class="form-group">
+                <label for="expiry-date">有効期限</label>
+                <input type="text" id="expiry-date" placeholder="MM/YY">
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="CVV">
+            </div>
+        </section>
+        <section class="shipping-info">
+            <h2>配送先情報</h2>
+            <div class="form-group">
+                <label for="address">住所</label>
+                <input type="text" id="address" placeholder="住所を入力">
+            </div>
+            <div class="form-group">
+                <label for="city">市区町村</label>
+                <input type="text" id="city" placeholder="市区町村を入力">
+            </div>
+            <div class="form-group">
+                <label for="postal-code">郵便番号</label>
+                <input type="text" id="postal-code" placeholder="郵便番号を入力">
+            </div>
+        </section>
+        <section class="confirm-order">
+            <div class="form-group">
+                <button>注文を確定</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

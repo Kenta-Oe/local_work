@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ショッピングカート画面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .cart-items {
+            margin: 20px 0;
+        }
+        .cart-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .total-amount {
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .checkout {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ショッピングカート画面</h1>
+        </header>
+        <section class="cart-items">
+            <h2>カートアイテムリスト</h2>
+            <div class="cart-item">
+                <h3>製品名1</h3>
+                <p>数量: 1</p>
+                <p>価格: ¥1000</p>
+            </div>
+            <div class="cart-item">
+                <h3>製品名2</h3>
+                <p>数量: 2</p>
+                <p>価格: ¥2000</p>
+            </div>
+        </section>
+        <section class="total-amount">
+            <h2>合計金額: ¥5000</h2>
+        </section>
+        <section class="checkout">
+            <button>チェックアウト</button>
+        </section>
+    </div>
+</body>
+</html>
