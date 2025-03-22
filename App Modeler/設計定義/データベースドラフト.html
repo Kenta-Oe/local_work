@@ -1,0 +1,298 @@
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>テーブル定義</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>テーブル定義</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>テーブル名</th>
+                <th>カラム名</th>
+                <th>データ型</th>
+                <th>制約</th>
+                <th>説明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>users</td>
+                <td>user_id</td>
+                <td>INT</td>
+                <td>PRIMARY KEY AUTO_INCREMENT</td>
+                <td>ユーザーの一意識別子</td>
+            </tr>
+            <tr>
+                <td>users</td>
+                <td>username</td>
+                <td>VARCHAR(50)</td>
+                <td>UNIQUE NOT NULL</td>
+                <td>ユーザー名</td>
+            </tr>
+            <tr>
+                <td>users</td>
+                <td>email</td>
+                <td>VARCHAR(100)</td>
+                <td>UNIQUE NOT NULL</td>
+                <td>メールアドレス</td>
+            </tr>
+            <tr>
+                <td>users</td>
+                <td>password_hash</td>
+                <td>VARCHAR(255)</td>
+                <td>NOT NULL</td>
+                <td>ハッシュ化されたパスワード</td>
+            </tr>
+            <tr>
+                <td>users</td>
+                <td>created_at</td>
+                <td>TIMESTAMP</td>
+                <td>DEFAULT CURRENT_TIMESTAMP</td>
+                <td>アカウント作成日時</td>
+            </tr>
+            <tr>
+                <td>products</td>
+                <td>product_id</td>
+                <td>INT</td>
+                <td>PRIMARY KEY AUTO_INCREMENT</td>
+                <td>製品の一意識別子</td>
+            </tr>
+            <tr>
+                <td>products</td>
+                <td>name</td>
+                <td>VARCHAR(100)</td>
+                <td>NOT NULL</td>
+                <td>製品名</td>
+            </tr>
+            <tr>
+                <td>products</td>
+                <td>description</td>
+                <td>TEXT</td>
+                <td></td>
+                <td>製品説明</td>
+            </tr>
+            <tr>
+                <td>products</td>
+                <td>price</td>
+                <td>DECIMAL(10,2)</td>
+                <td>NOT NULL</td>
+                <td>製品価格</td>
+            </tr>
+            <tr>
+                <td>products</td>
+                <td>stock_quantity</td>
+                <td>INT</td>
+                <td>NOT NULL</td>
+                <td>在庫数量</td>
+            </tr>
+            <tr>
+                <td>products</td>
+                <td>created_at</td>
+                <td>TIMESTAMP</td>
+                <td>DEFAULT CURRENT_TIMESTAMP</td>
+                <td>製品登録日時</td>
+            </tr>
+            <tr>
+                <td>categories</td>
+                <td>category_id</td>
+                <td>INT</td>
+                <td>PRIMARY KEY AUTO_INCREMENT</td>
+                <td>カテゴリの一意識別子</td>
+            </tr>
+            <tr>
+                <td>categories</td>
+                <td>name</td>
+                <td>VARCHAR(50)</td>
+                <td>UNIQUE NOT NULL</td>
+                <td>カテゴリ名</td>
+            </tr>
+            <tr>
+                <td>categories</td>
+                <td>description</td>
+                <td>TEXT</td>
+                <td></td>
+                <td>カテゴリ説明</td>
+            </tr>
+            <tr>
+                <td>product_categories</td>
+                <td>product_id</td>
+                <td>INT</td>
+                <td>FOREIGN KEY REFERENCES products(product_id)</td>
+                <td>製品の一意識別子</td>
+            </tr>
+            <tr>
+                <td>product_categories</td>
+                <td>category_id</td>
+                <td>INT</td>
+                <td>FOREIGN KEY REFERENCES categories(category_id)</td>
+                <td>カテゴリの一意識別子</td>
+            </tr>
+            <tr>
+                <td>orders</td>
+                <td>order_id</td>
+                <td>INT</td>
+                <td>PRIMARY KEY AUTO_INCREMENT</td>
+                <td>注文の一意識別子</td>
+            </tr>
+            <tr>
+                <td>orders</td>
+                <td>user_id</td>
+                <td>INT</td>
+                <td>FOREIGN KEY REFERENCES users(user_id)</td>
+                <td>ユーザーの一意識別子</td>
+            </tr>
+            <tr>
+                <td>orders</td>
+                <td>total_amount</td>
+                <td>DECIMAL(10,2)</td>
+                <td>NOT NULL</td>
+                <td>注文の合計金額</td>
+            </tr>
+            <tr>
+                <td>orders</td>
+                <td>status</td>
+                <td>VARCHAR(50)</td>
+                <td>NOT NULL</td>
+                <td>注文のステータス</td>
+            </tr>
+            <tr>
+                <td>orders</td>
+                <td>created_at</td>
+                <td>TIMESTAMP</td>
+                <td>DEFAULT CURRENT_TIMESTAMP</td>
+                <td>注文日時</td>
+            </tr>
+            <tr>
+                <td>order_items</td>
+                <td>order_item_id</td>
+                <td>INT</td>
+                <td>PRIMARY KEY AUTO_INCREMENT</td>
+                <td>注文アイテムの一意識別子</td>
+            </tr>
+            <tr>
+                <td>order_items</td>
+                <td>order_id</td>
+                <td>INT</td>
+                <td>FOREIGN KEY REFERENCES orders(order_id)</td>
+                <td>注文の一意識別子</td>
+            </tr>
+            <tr>
+                <td>order_items</td>
+                <td>product_id</td>
+                <td>INT</td>
+                <td>FOREIGN KEY REFERENCES products(product_id)</td>
+                <td>製品の一意識別子</td>
+            </tr>
+            <tr>
+                <td>order_items</td>
+                <td>quantity</td>
+                <td>INT</td>
+                <td>NOT NULL</td>
+                <td>注文数量</td>
+            </tr>
+            <tr>
+                <td>order_items</td>
+                <td>price</td>
+                <td>DECIMAL(10,2)</td>
+                <td>NOT NULL</td>
+                <td>注文時の製品価格</td>
+            </tr>
+            <tr>
+                <td>cart_items</td>
+                <td>cart_item_id</td>
+                <td>INT</td>
+                <td>PRIMARY KEY AUTO_INCREMENT</td>
+                <td>カートアイテムの一意識別子</td>
+            </tr>
+            <tr>
+                <td>cart_items</td>
+                <td>user_id</td>
+                <td>INT</td>
+                <td>FOREIGN KEY REFERENCES users(user_id)</td>
+                <td>ユーザーの一意識別子</td>
+            </tr>
+            <tr>
+                <td>cart_items</td>
+                <td>product_id</td>
+                <td>INT</td>
+                <td>FOREIGN KEY REFERENCES products(product_id)</td>
+                <td>製品の一意識別子</td>
+            </tr>
+            <tr>
+                <td>cart_items</td>
+                <td>quantity</td>
+                <td>INT</td>
+                <td>NOT NULL</td>
+                <td>カート内の製品数量</td>
+            </tr>
+            <tr>
+                <td>cart_items</td>
+                <td>added_at</td>
+                <td>TIMESTAMP</td>
+                <td>DEFAULT CURRENT_TIMESTAMP</td>
+                <td>カートに追加された日時</td>
+            </tr>
+            <tr>
+                <td>reviews</td>
+                <td>review_id</td>
+                <td>INT</td>
+                <td>PRIMARY KEY AUTO_INCREMENT</td>
+                <td>レビューの一意識別子</td>
+            </tr>
+            <tr>
+                <td>reviews</td>
+                <td>product_id</td>
+                <td>INT</td>
+                <td>FOREIGN KEY REFERENCES products(product_id)</td>
+                <td>製品の一意識別子</td>
+            </tr>
+            <tr>
+                <td>reviews</td>
+                <td>user_id</td>
+                <td>INT</td>
+                <td>FOREIGN KEY REFERENCES users(user_id)</td>
+                <td>ユーザーの一意識別子</td>
+            </tr>
+            <tr>
+                <td>reviews</td>
+                <td>rating</td>
+                <td>INT</td>
+                <td>NOT NULL</td>
+                <td>製品の評価（1-5）</td>
+            </tr>
+            <tr>
+                <td>reviews</td>
+                <td>comment</td>
+                <td>TEXT</td>
+                <td></td>
+                <td>レビューコメント</td>
+            </tr>
+            <tr>
+                <td>reviews</td>
+                <td>created_at</td>
+                <td>TIMESTAMP</td>
+                <td>DEFAULT CURRENT_TIMESTAMP</td>
+                <td>レビュー作成日時</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+```

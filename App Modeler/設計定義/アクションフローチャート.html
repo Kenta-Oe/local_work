@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+                <html lang="ja">
+                <head>
+                  <meta charset="utf-8">
+                </head>
+                <body>
+                  <h2>アクションフローチャート</h2>
+                  <div class="mermaid">
+            
+flowchart TD
+    subgraph ユーザー
+        A1[ウェブサイトにアクセス]
+        A2[製品を閲覧]
+        A3[ショッピングカートに追加]
+        A4[チェックアウト]
+        A5[支払い情報を入力]
+        A6[注文を確定]
+    end
+
+    subgraph システム
+        B1[クラウドフロントでコンテンツ配信]
+        B2[APIゲートウェイでリクエスト受信]
+        B3[EC2でアプリケーション処理]
+        B4[オーロラポストグレSQLでデータベース操作]
+        B5[エラスティックキャッシュでキャッシュ処理]
+        B6[S3にログ保存]
+        B7[クラウドウォッチで監視]
+        B8[SNSで異常通知]
+    end
+
+    A1 --> B1
+    A2 --> B1
+    A3 --> B2
+    A4 --> B2
+    A5 --> B2
+    A6 --> B2
+    B2 --> B3
+    B3 --> B4
+    B3 --> B5
+    B3 --> B6
+    B7 --> B8
+
+                </div>
+                <div className="flex flex-col gap-8">
+                  <div>
+                    <h3 className="pb-2">Mermaid</h3>
+                    <pre>
+                      
+flowchart TD
+    subgraph ユーザー
+        A1[ウェブサイトにアクセス]
+        A2[製品を閲覧]
+        A3[ショッピングカートに追加]
+        A4[チェックアウト]
+        A5[支払い情報を入力]
+        A6[注文を確定]
+    end
+
+    subgraph システム
+        B1[クラウドフロントでコンテンツ配信]
+        B2[APIゲートウェイでリクエスト受信]
+        B3[EC2でアプリケーション処理]
+        B4[オーロラポストグレSQLでデータベース操作]
+        B5[エラスティックキャッシュでキャッシュ処理]
+        B6[S3にログ保存]
+        B7[クラウドウォッチで監視]
+        B8[SNSで異常通知]
+    end
+
+    A1 --> B1
+    A2 --> B1
+    A3 --> B2
+    A4 --> B2
+    A5 --> B2
+    A6 --> B2
+    B2 --> B3
+    B3 --> B4
+    B3 --> B5
+    B3 --> B6
+    B7 --> B8
+
+                    </pre>
+                  </div>
+                </div>
+                
+                <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+                <script>
+                mermaid.initialize({startOnLoad:true});
+                </script>
+                </body>
+                </html>
+            
